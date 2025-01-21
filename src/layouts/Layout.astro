@@ -1,22 +1,33 @@
 <!doctype html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
-	</head>
-	<body>
-		<slot />
-	</body>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta
+      name="description"
+      content="Hola soy Pablo Calvente, desarrollador web."
+    />
+    <meta property="og:title" content="Pablo Calvente - Desarrollador Web" />
+    <meta
+      property="og:description"
+      content="Bienvenidos a mi portafolios, en el encontraras información sobre mis habilidades y proyectos."
+    />
+    <meta property="og:url" content="https://" />
+    <meta property="og:image" content="" />
+    <link rel="icon" type="image/ico" href="/favicon.ico" />
+
+    <title>Pablo Calvente</title>
+  </head>
+  <body class="bg-gray-900">
+    <slot />
+  </body>
 </html>
 
 <style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
-	}
+  html,
+  body {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+  }
 </style>

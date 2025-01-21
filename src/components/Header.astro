@@ -1,0 +1,21 @@
+---
+import { Image } from "astro:assets";
+import GH from "../assets/Github_dark.svg";
+import IN from "../assets/linkedinprueba.svg";
+---
+
+<div class="flex flex-row-reverse items-center gap-2 content-end mt-4 pr-4 sm:">
+  <a
+    class="no-underline w-10 lg:w-12"
+    target="_blank"
+    href="https://github.com/calventeramirez"
+    ><Image src={GH} alt={"GitHub"} /></a
+  >
+
+  <a
+    class="no-underline w-10 lg:w-12"
+    target="_blank"
+    href="https://www.linkedin.com/in/calventeramirez/"
+    ><Image src={IN} alt={"Linkedin"} /></a
+  >
+</div>
