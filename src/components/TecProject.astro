@@ -1,0 +1,40 @@
+---
+import logoGit from "../assets/Github_light.svg";
+import HTML from "../assets/html5.svg";
+import CSS from "../assets/css3.svg";
+import JS from "../assets/JS.svg";
+import PHP from "../assets/PHP_dark.svg";
+import MySQL from "../assets/mysql.svg";
+import Angular from "../assets/angular.svg";
+import { Image } from "astro:assets";
+
+const {logo} = Astro.props;
+let img;
+switch (logo){
+    case 'HTML':
+        img = HTML;
+        break;
+    case 'CSS':
+        img = CSS;
+        break;
+    case 'JS':
+        img = JS;
+        break;
+    case 'PHP':
+        img = PHP;
+        break;
+    case 'MySQL':
+        img = MySQL;
+        break;
+    case 'Angular':
+        img = Angular;
+        break;
+    default:
+        img = logoGit;
+        break;
+}
+---
+
+<picture class="overflow-hidden">
+    <Image class="w-8" src={img} alt={img.src} loading={"lazy"} />
+</picture>

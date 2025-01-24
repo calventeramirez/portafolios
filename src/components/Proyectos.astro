@@ -1,0 +1,59 @@
+---
+import { Image } from "astro:assets";
+import logoProg from "../assets/codificacion.svg";
+import CardProject from "./CardProject.astro";
+
+import pharmacyapp from "../assets/PharmacyApp.png";
+import country from "../assets/CountryApp.png";
+import gifs from "../assets/GifsApp.png";
+import heroes from "../assets/Heroes.png";
+import flecha from "../assets/flecha.svg";
+
+const pharLenguajes = ["HTML", "CSS", "JS", "PHP", "MySQL"];
+const gifsLenguajes = ["HTML", "CSS", "JS", "Angular"];
+const countryLenguajes = ["HTML", "CSS", "JS", "Angular"];
+const heroesLenguajes = ["HTML", "CSS", "JS", "Angular"];
+---
+
+<section class="mt-20 xl:mt-40">
+  <span
+    class="flex self-start font-semibold text-white underline items-center justify-center gap-2 text-xl mb-10 md:text-4xl
+     xl:text-5xl"
+  >
+    <Image class="w-7 xl:w-16" src={logoProg} alt={"Logo Programación"} />
+    Proyectos
+  </span>
+  <div class="grid grid-cols-1 gap-4 mt-10 ">
+    <CardProject
+      nombre="PharmacyApp"
+      enlace="https://github.com/calventeramirez/PharmacyApp"
+      imagen={pharmacyapp}
+      descripcion="Proyecto de desarrollo de una aplicación web diseñada para farmacias, con funcionalidades clave como: autenticación de usuarios, dashboard intuitivo, gestión de productos, compras en línea. Esta aplicación combina diseño funcional y tecnología eficiente para ofrecer una experiencia de usuario fluida."
+      logos={pharLenguajes}
+    />
+    <CardProject
+      nombre="GifsApp"
+      enlace="https://github.com/calventeramirez/GifsApp"
+      imagen={gifs}
+      descripcion="GifsApp es una aplicación moderna e intuitiva que utiliza una API para buscar y mostrar GIFs en tiempo real. Permite a los usuarios explorar, buscar y compartir contenido animado de forma rápida y sencilla, con una interfaz amigable y categorizada para una experiencia visual dinámica."
+      logos={gifsLenguajes}
+    />
+    <CardProject
+      nombre="CountryApp"
+      enlace="https://github.com/calventeramirez/CountryApp"
+      imagen={country}
+      descripcion="CountryApp es una aplicación interactiva que utiliza una API para acceder a datos de países, mostrando información clave como capitales, nombres, regiones y más. Ofrece una experiencia de búsqueda rápida y precisa para explorar el mundo de manera sencilla y organizada."
+      logos={countryLenguajes}
+    />
+    <CardProject
+      nombre="HeroesApp"
+      enlace="https://github.com/calventeramirez/heroesApp"
+      imagen={heroes}
+      descripcion="HeroesApp es una aplicación dinámica que presenta un listado de superhéroes en tarjetas visuales. Permite a los usuarios realizar operaciones CRUD (Crear, Leer, Actualizar y Eliminar) de forma intuitiva, ideal para gestionar y personalizar tu colección de héroes favoritos."
+      logos={heroesLenguajes}
+    />
+    <div class="flex items-center justify-center">
+        <a class="border-none rounded-lg bg-blue-600 text-white text-base min-w-16 flex items-center gap-2 no-underline px-5 py-3" href="https://github.com/calventeramirez?tab=overview" target="_blank">Ver más<Image src={flecha} alt="flecha"/></a>
+    </div>
+  </div>
+</section>
