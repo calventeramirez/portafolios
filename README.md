@@ -49,7 +49,7 @@ npm start
 
 ### Abrir en el navegador:
 
-Visita [http://localhost:3000](http://localhost:3000) para ver el sitio en funcionamiento.
+Visita [http://localhost:3000](http://localhost:4231) para ver el sitio en funcionamiento.
 
 ## Contacto
 
