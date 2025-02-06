@@ -1,0 +1,148 @@
+---
+import { Image } from "astro:assets";
+
+import Habilidad from "../assets/habilidades.svg";
+import CardHab from "./CardHab.astro";
+
+import HTML from "../assets/html5.svg";
+import CSS3 from "../assets/css3.svg";
+import JS from "../assets/JS.svg";
+import TYPESCRIPT from "../assets/typescript.svg";
+import ANGULAR from "../assets/angular.svg";
+import REACT from "../assets/React.svg";
+import ASTRO from "../assets/astro_dark.svg";
+import BOOTSTRAP from "../assets/Bootstrap.svg";
+import TAILWIND from "../assets/TailwindCSS_dark.svg";
+
+import PHP from "../assets/PHP_dark.svg";
+import LARAVEL from "../assets/laravel.svg";
+import NODE from "../assets/NodeJS.svg";
+import MYSQL from "../assets/mysql.svg";
+import ORACLE from "../assets/Oracle_SQL_Developer.svg";
+import DOCKER from "../assets/docker.svg";
+import APACHE from "../assets/Apache.svg";
+
+import C from "../assets/C.svg";
+import JAVA from "../assets/java.svg";
+import PYTHON from "../assets/python.svg";
+
+import GIT from "../assets/git.svg";
+import VSC from "../assets/vsc.svg";
+import POSTMAN from "../assets/postman.svg";
+import AWS from "../assets/aws_dark.svg";
+
+const techsFront = [
+  { nombre: "HTML", imagen: HTML },
+  { nombre: "CSS3", imagen: CSS3 },
+  { nombre: "Javascript", imagen: JS },
+  { nombre: "TypeScript", imagen: TYPESCRIPT },
+  { nombre: "Angular", imagen: ANGULAR },
+  { nombre: "React", imagen: REACT },
+  { nombre: "Astro", imagen: ASTRO },
+  { nombre: "Bootstrap", imagen: BOOTSTRAP },
+  { nombre: "TailwindCSS", imagen: TAILWIND },
+];
+
+const techsBack = [
+  { nombre: "PHP", imagen: PHP },
+  { nombre: "Laravel", imagen: LARAVEL },
+  { nombre: "Node.JS", imagen: NODE },
+  { nombre: "MySQL", imagen: MYSQL },
+  { nombre: "Oracle DB", imagen: ORACLE },
+  { nombre: "Docker", imagen: DOCKER },
+  { nombre: "Apache", imagen: APACHE },
+];
+
+const techsOtros = [
+  { nombre: "C", imagen: C },
+  { nombre: "Java", imagen: JAVA },
+  { nombre: "Python", imagen: PYTHON },
+];
+
+const Herramientas = [
+  { nombre: "Git", imagen: GIT },
+  { nombre: "VSC", imagen: VSC },
+  { nombre: "Postmant", imagen: POSTMAN },
+  { nombre: "AWS", imagen: AWS },
+];
+---
+
+<section class="flex flex-col justify-center relative w-full mb-20 mt-8">
+  <span
+    class="flex font-semibold text-white underline items-center justify-center gap-2 text-xl mb-10 md:text-4xl
+     xl:text-5xl"
+  >
+    <Image class="w-8 xl:w-16" src={Habilidad} alt="Habilidades" />
+    Habilidades
+  </span>
+  <div id="Front-end" class="flex flex-col gap-6">
+    <span
+      class="text-[18px] font-semibold underline text-white m-auto xl:mx-72 xl:text-[2rem]"
+      >Front-End</span
+    >
+    <div
+      id="cartas"
+      class="grid auto-rows-[1fr] grid-flow-dense gap-4 xl:gap-2 w-3/4 m-auto"
+    >
+      {
+        techsFront.map((tech) => (
+          <CardHab nombre={tech.nombre} img={tech.imagen} />
+        ))
+      }
+    </div>
+  </div>
+  <div id="Back-end" class="flex flex-col gap-6 mt-8">
+    <span
+      class="text-[18px] font-semibold underline text-white m-auto xl:mx-72 xl:text-[2rem]"
+      >Back-End</span
+    >
+    <div
+      id="cartas"
+      class="grid auto-rows-[1fr] grid-flow-dense gap-4 xl:gap-2 w-3/4 m-auto"
+    >
+      {
+        techsBack.map((tech) => (
+          <CardHab nombre={tech.nombre} img={tech.imagen} />
+        ))
+      }
+    </div>
+  </div>
+  <div id="OtrosLenguajes" class="flex flex-col gap-6 mt-8">
+    <span
+      class="text-[18px] font-semibold underline text-white m-auto xl:mx-72 xl:text-[2rem]"
+      >Otros Lenguajes</span
+    >
+    <div
+      id="cartas"
+      class="grid auto-rows-[1fr] grid-flow-dense gap-4 xl:gap-2 w-3/4 m-auto"
+    >
+      {
+        techsOtros.map((tech) => (
+          <CardHab nombre={tech.nombre} img={tech.imagen} />
+        ))
+      }
+    </div>
+  </div>
+  <div id="Herramientas" class="flex flex-col gap-6 mt-8">
+    <span
+      class="text-[18px] font-semibold underline text-white m-auto xl:mx-72 xl:text-[2rem]"
+      >Herramientas</span
+    >
+    <div
+      id="cartas"
+      class="grid auto-rows-[1fr] grid-flow-dense gap-4 xl:gap-2 w-3/4 m-auto"
+    >
+      {
+        Herramientas.map((tech) => (
+          <CardHab nombre={tech.nombre} img={tech.imagen} />
+        ))
+      }
+    </div>
+  </div>
+</section>
+
+<style>
+  #cartas {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  }
+</style>
