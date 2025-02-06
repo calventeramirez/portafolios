@@ -8,16 +8,14 @@ const { nombre, img } = Astro.props;
   id="carta"
   class="p-4 bg-[#1f2937] border-[#374151] w-2/4 m-auto md:w-full md:p-5 lg:p-6 xl:p-6 rounded-xl flex flex-col items-center shadow-2xl transition-all hover:scale-105"
 >
-  <div id="cuerpo" class="">
+  <div id="cuerpo" class="flex flex-col items-center">
     <Image
       class="w-12 h-12 md:w-14 md:h-14 lg:w-16 lg:h-16 mb-2 m-auto"
       src={img}
       alt={"Logo " + nombre}
       loading={"lazy"}
     />
-    <p
-      class="text-sm text-white mt-4 m-auto sm:text-base md:text-lg lg:text-xl"
-    >
+    <p class="text-sm text-white mt-4 sm:text-base md:text-lg lg:text-xl">
       {nombre}
     </p>
   </div>
