@@ -1,40 +1,94 @@
 ---
-import logoGit from "../assets/Github_light.svg";
 import HTML from "../assets/html5.svg";
 import CSS from "../assets/css3.svg";
 import JS from "../assets/JS.svg";
+import TYPESCRIPT from "../assets/typescript.svg";
+import ANGULAR from "../assets/angular.svg";
+import REACT from "../assets/React.svg";
+import ASTRO from "../assets/astro_dark.svg";
+import BOOTSTRAP from "../assets/Bootstrap.svg";
+import TAILWIND from "../assets/TailwindCSS_dark.svg";
+
 import PHP from "../assets/PHP_dark.svg";
-import MySQL from "../assets/mysql.svg";
-import Angular from "../assets/angular.svg";
+import LARAVEL from "../assets/laravel.svg";
+import NODE from "../assets/NodeJS.svg";
+import MYSQL from "../assets/mysql.svg";
+import ORACLE from "../assets/Oracle_SQL_Developer.svg";
+import DOCKER from "../assets/docker.svg";
+import APACHE from "../assets/Apache.svg";
+
+import C from "../assets/C.svg";
+import JAVA from "../assets/java.svg";
+import PYTHON from "../assets/python.svg";
+
 import { Image } from "astro:assets";
 
-const {logo} = Astro.props;
+const { logo } = Astro.props;
 let img;
-switch (logo){
-    case 'HTML':
-        img = HTML;
-        break;
-    case 'CSS':
-        img = CSS;
-        break;
-    case 'JS':
-        img = JS;
-        break;
-    case 'PHP':
-        img = PHP;
-        break;
-    case 'MySQL':
-        img = MySQL;
-        break;
-    case 'Angular':
-        img = Angular;
-        break;
-    default:
-        img = logoGit;
-        break;
+switch (logo) {
+  case "HTML":
+    img = HTML;
+    break;
+  case "CSS":
+    img = CSS;
+    break;
+  case "JS":
+    img = JS;
+    break;
+  case "PHP":
+    img = PHP;
+    break;
+  case "MySQL":
+    img = MYSQL;
+    break;
+  case "Angular":
+    img = ANGULAR;
+    break;
+  case "Typescript":
+    img = TYPESCRIPT;
+    break;
+  case "React":
+    img = REACT;
+    break;
+  case "Astro":
+    img = ASTRO;
+    break;
+  case "Bootstrap":
+    img = BOOTSTRAP;
+    break;
+  case "Tailwind":
+    img = TAILWIND;
+    break;
+  case "Laravel":
+    img = LARAVEL;
+    break;
+  case "Node":
+    img = NODE;
+    break;
+  case "Oracle":
+    img = ORACLE;
+    break;
+  case "Docker":
+    img = DOCKER;
+    break;
+  case "Apache":
+    img = APACHE;
+    break;
+  case "C":
+    img = C;
+    break;
+  case "Java":
+    img = JAVA;
+    break;
+  case "Python":
+    img = PYTHON;
+    break;
+  default:
+    img = HTML;
+    break;
 }
 ---
 
 <picture class="overflow-hidden">
-    <Image class="w-8" src={img} alt={img.src} loading={"lazy"} />
+  <Image class="w-8" src={img} alt={img.src} loading={"lazy"} />
 </picture>
