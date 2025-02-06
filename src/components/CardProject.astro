@@ -12,10 +12,10 @@ const { nombre, enlace, imagen, descripcion, logos } = Astro.props;
   <div class="w-3/4 lg:w-3/4 2xl:w-2/4">
     <a class="" target="_blank" href={enlace}>
       <picture
-        class="flex justify-center rounded-lg overflow-hidden mb-3 sm:mb-0"
+        class="flex justify-end rounded-lg overflow-hidden mb-3 sm:mb-0"
       >
         <Image
-          class="aspect-video w-full h-full rounded-lg"
+          class="aspect-video w-full h-full rounded-3xl xl:w-[80%]"
           src={imagen}
           alt={"Logo " + nombre}
           loading={"lazy"}
@@ -24,14 +24,14 @@ const { nombre, enlace, imagen, descripcion, logos } = Astro.props;
     </a>
   </div>
   <div
-    class="w-3/4 flex flex-col items-center justify-center leading-8 text-justify gap-2 xl:w-3/5"
+    class="w-3/4 flex flex-col items-center justify-center leading-8 text-justify gap-2 xl:w-[60%] xl:items-start"
   >
     <span
-      class="text-xl font-semibold text-white flex self-center items-center justify-center sm:text-3xl md:text-3xl xl:text-4xl xl:mr-[170%] xl:mb-10 2xl:mr-0"
+      class="text-xl font-semibold text-white flex self-center items-center justify-center sm:text-3xl md:text-3xl xl:text-4xl xl:mr-[0] xl:mb-4 xl:self-start 2xl:mr-0"
       >{nombre}</span
     >
     <p
-      class="text-sm font-normal text-left leading-7 text-white text-pretty sm:text-base md:text-xl xl:text-lg xl:leading-9"
+      class="text-sm font-normal text-left leading-7 text-white text-pretty sm:text-base md:text-xl xl:text-lg xl:leading-5"
     >
       {descripcion}
     </p>
