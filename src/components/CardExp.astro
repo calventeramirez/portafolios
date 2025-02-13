@@ -1,0 +1,29 @@
+---
+const { titulo, empresa, tiempo, descripcion } = Astro.props;
+---
+
+<li class="mb-10 ms-4">
+  <!-- Puntito -->
+  <div
+    class="absolute w-3 h-3 bg-blue-500 rounded-full mt-1.5 -start-1.5 boder border-blue-500"
+  >
+  </div>
+  <!-- Info -->
+  <div
+    class="relative mx-4 pb-12 grid
+  before:absolute before:left-[-35px] before:block
+  before:h-full :before:border-white/15 before:content-['']
+  md:grid-cols-5 md:gap-10 md:space-x-4]"
+  >
+    <div class="relative pb-12 md:col-span-2 xl:col-span-1">
+      <div class="sticky top-0">
+        <h3 class="text-xl font-bold text-blue-400">{titulo}</h3>
+        <h4 class="font-semibold text-xl text-white">{empresa}</h4>
+        <time class="p-0 m-0 text-sm text-white">{tiempo}</time>
+      </div>
+    </div>
+    <div class="relative flex flex-col gap-2 pb-4 text-gray-300 md:col-span-3">
+      {descripcion}
+    </div>
+  </div>
+</li>

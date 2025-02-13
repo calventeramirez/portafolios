@@ -1,0 +1,54 @@
+---
+import { Image } from "astro:assets";
+import CardExp from "./CardExp.astro";
+
+import Maleta from "../assets/maleta.svg";
+
+const exp = [
+  {
+    titulo: "Desarrollador Web",
+    empresa: "Grupo Oro",
+    tiempo: "Marzo 2024 - Junio 2024",
+    descripcion: "Como desarrollador web en Grupo Oro, me encargué de la creación distintas webs, utilizando el CMS de WordPress y diversos plugins como Elementor. Además de reunirme con distintos clientes para tomar los requisitos de las webs a desarrollar. Internamente tambien desarrolle con React y Laravel un proyecto interno para la empresa.",
+  },
+  {
+    titulo: "Barman",
+    empresa: "Juan Centurión",
+    tiempo: "Junio 2022 - Julio 2022",
+    descripcion: "En Juan Centurión, me desempeñé como barman, atendiendo a los clientes y preparando diferentes bebidas. Además, me encargué de la organización de cámaras, gestión de inventario entre otras funciones.",
+  },
+  {
+    titulo: "Monitor de Informática",
+    empresa: "Asociación Tecforce",
+    tiempo: "Junio 2019 - Septiembre 2019",
+    descripcion: "En la Asociación Tecforce, me desempeñé como monitor de informática, enseñando a niños entre 6 y 12 años a utilizar programas básicos de ofimática, navegación por internet y programación básica en Scratch.",
+  },
+];
+---
+
+<section class="mx-auto">
+  <span
+    class="flex self-start font-semibold text-white underline items-center justify-center gap-2 text-xl mb-10 mt-44 md:text-4xl md:mt-96
+     xl:text-5xl xl:mt-96"
+  >
+    <Image
+      class="w-7 xl:w-16"
+      src={Maleta}
+      alt={"Logo Maleta"}
+      loading={"lazy"}
+    />
+    Experiencia
+  </span>
+  <ol class="relative border-s border-blue-400/40 ml-10 mt-10 2xl:ml-96">
+    {
+      exp.map((experiencia) => (
+        <CardExp
+          titulo={experiencia.titulo}
+          empresa={experiencia.empresa}
+          tiempo={experiencia.tiempo}
+          descripcion={experiencia.descripcion}
+        />
+      ))
+    }
+  </ol>
+</section>
