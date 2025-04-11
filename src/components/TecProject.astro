@@ -21,6 +21,8 @@ import C from "../assets/C.svg";
 import JAVA from "../assets/java.svg";
 import PYTHON from "../assets/python.svg";
 
+import MARKDOWN from "../assets/Markdown_dark.svg";
+
 import { Image } from "astro:assets";
 
 const { logo } = Astro.props;
@@ -82,6 +84,9 @@ switch (logo) {
     break;
   case "Python":
     img = PYTHON;
+    break;
+  case "Markdown":
+    img = MARKDOWN;
     break;
   default:
     img = HTML;
