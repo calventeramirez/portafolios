@@ -14,13 +14,14 @@ import avatar from "../assets/avatar.png";
     >
     <div class="mt-5 flex content-start items-center gap-y-8 flex-col sm:flex-row sm:gap-x-8 lg:mt-10">
       <a
+        id="downloadCV"
         class="rounded-2xl bg-blue-700 text-white px-10 h-20 shadow-md no-underline flex items-center content-center sm:h-16 sm:px-10 sm:w-48 md:text-md"
-        href="/CV_Pablo_Calvente.pdf"
-        download="CV-Pablo Calvente.pdf">Descargar CV</a
+        href="#">Descargar CV</a
       >
       <a
+        id="viewCV"
         class=" rounded-2xl bg-blue-700 text-white px-14 h-20 w-auto shadow-md no-underline flex items-center content-center sm:h-16 sm:px-10 sm:w-32 md:text-md"
-        href="/CV_Pablo_Calvente.pdf" target="_blank">Ver CV</a
+        href="#" target="_blank">Ver CV</a
       >
     </div>
   </div>
@@ -30,3 +31,19 @@ import avatar from "../assets/avatar.png";
     alt={"Pablo Calvente"}
   />
 </section>
+
+<script>
+  const userLang = navigator.language || navigator.language[0];
+  const isSpanish = userLang.toLowerCase().startsWith('es');
+
+  const cvPath = isSpanish ? '/CV_spanish.pdf' : '/CV_english.pdf';
+
+  const downloadLink = document.getElementById('downloadCV');
+  const viewLink = document.getElementById('viewCV');
+
+  if(downloadLink && viewLink) {
+    downloadLink.setAttribute('href', cvPath);
+    downloadLink.setAttribute('download', isSpanish ? 'CV-Pablo_Calvente.pdf' : 'CV-Pablo_Calvente_English.pdf');
+    viewLink.setAttribute('href', cvPath);
+  }
+</script>
